@@ -1,0 +1,31 @@
+// Your variables are stored here
+
+// ==== CSS Vars ======================================================================================================================================================
+
+:root {
+  // Colors
+  --color-black: #{hex-to-rgb(#000)};
+  --color-white: #{hex-to-rgb(#fff)};
+  --color-biscay: #{hex-to-rgb(#2c2c54)};
+  --color-slate-blue: #{hex-to-rgb(#686de0)};
+  --color-gray: #{hex-to-rgb(#929292)};
+  --color-storm-dust: #{hex-to-rgb(#5b5b5b)};
+
+  // Indents
+  --section-offset: 60px;
+
+  // Borders
+  --border-radius: 5px;
+
+  // Fonts
+  --font-family: #{$font-family}, sans-serif;
+
+  // Typefaces
+  --font-medium: 500 #{adaptive-value(15px, 25px, $xxs, $template-size)} / 130% #{cl(font-family)};
+  --font-big-title: 900 #{adaptive-value(30px, 80px, $xxs, $template-size)} / 130% #{cl(font-family)};
+  --font-bold: 700 #{adaptive-value(10px, 30px, $xxs, $template-size)} / 130% #{cl(font-family)};
+  --font-title: 900 #{adaptive-value(20px, 50px, $xxs, $template-size)} / 130% #{cl(font-family)};
+  --font-semibold: 600 #{adaptive-value(15px, 25px, $xxs, $template-size)} / 130% #{cl(font-family)};
+}
+
+// ====================================================================================================================================================================
