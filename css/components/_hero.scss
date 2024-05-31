@@ -1,0 +1,36 @@
+.hero {
+  // .hero__container
+  &__container {
+    margin-top: adaptive-value(60px, 150px, $xxs, $template-size);
+    padding-top: 30px;
+  }
+
+  // .hero__title
+  &__title {
+    margin: 0 0 adaptive-value(22.5px, 45px, $xxs, $template-size);
+    max-width: 1150px;
+    font: cl(font-big-title);
+    color: cl(color-white);
+  }
+
+  // .hero__subtitle
+  &__subtitle {
+    margin: 0 0 adaptive-value(22.5px, 45px, $xxs, $template-size);
+    max-width: 700px;
+    font: cl(font-medium);
+    color: cl(color-white);
+  }
+
+  // .hero__btn
+  &__btn {
+  }
+}
+
+._container {
+}
+
+._btn-reset {
+}
+
+._link-reset {
+}

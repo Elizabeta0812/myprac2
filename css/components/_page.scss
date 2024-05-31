@@ -1,0 +1,19 @@
+.page {
+  &__hero {
+    margin-bottom: adaptive-value(80px, 210px, $xxs, $template-size);
+  }
+  &__popfilm {
+    margin-bottom: adaptive-value(80px, 210px, $xxs, $template-size);
+  }
+  &__watchlater {
+    margin-bottom: adaptive-value(140px, 270px, $xxs, $template-size);
+  }
+  &__news {
+    margin-bottom: adaptive-value(85px, 215px, $xxs, $template-size);
+  }
+  &__forum {
+   }
+  //&__membership {
+  //  margin-bottom: adaptive-value(85px, 215px, $xxs, $template-size);
+  //}
+}

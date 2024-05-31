@@ -1,0 +1,28 @@
+.title {
+  // .title__body
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  // .title__title
+  &__title {
+    margin: 0;
+    font: cl(font-title);
+    color: cl(color-white);
+  }
+
+  // .title__link
+  &__link {
+    font: cl(font-medium);
+    text-align: center;
+    color: cl(color-white);
+    @media (any-hover: hover) {
+      &::after {
+        background: cl(color-white);
+      }
+    }
+  }
+}

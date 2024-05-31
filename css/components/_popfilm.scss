@@ -1,0 +1,33 @@
+.popfilm {
+  // .popfilm__container
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .popfilm__title
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  // .popfilm__film-card
+  &__film-card {
+    .film-card__btn {
+      width: 75%;
+    }
+
+    .film-card__body {
+      min-height: adaptive-value(300px, 600px, $xxs, $template-size);
+      max-width: adaptive-value(586px, 1172px, $xxs, $template-size);
+
+      .film-card__image {
+        width: adaptive-value(180px, 975px, $xxs, $template-size);
+        height: adaptive-value(235px, 460px, $xxs, $template-size);
+      }
+    }
+  }
+}

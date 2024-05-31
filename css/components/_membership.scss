@@ -1,0 +1,123 @@
+.membership {
+  padding-top: adaptive-value(30px, 60px, $xxs, $template-size);
+  padding-bottom: adaptive-value(30px, 60px, $xxs, $template-size);
+  // .membership__container
+  &__container {
+  }
+
+  // .membership__form
+  &__form {
+  }
+}
+
+.form-membership {
+  // .form-membership__sending
+  &__sending {
+  }
+
+  // .form-membership__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: adaptive-value(15px, 20px, $xxs, $template-size)
+  }
+
+  // .form-membership__title
+  &__title {
+    display: inline-block;
+    max-width: 741px;
+    margin-bottom: adaptive-value(25px, 30px, $xxs, $template-size);
+    color: cl(color-white);
+    font: cl(font-medium);
+  }
+
+  // .form-membership__price
+  &__price {
+    font: cl(font-semibold);
+    text-decoration: underline;
+  }
+
+  // .form-membership__item
+  &__item {
+    position: relative;
+    width: adaptive-value(300px, 1100px, $xxs, $template-size);
+  }
+
+  // .form-membership__label
+  &__label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    display: flex;
+    border: none;
+    color: cl(color-slate-blue);
+    font: cl(font-medium);
+    background-color: transparent;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  // .form-membership__input
+  &__input {
+    appearance: none;
+    display: block;
+    border-radius: 40px;
+    border: 2px solid cl(color-slate-blue);
+    padding: adaptive-value(12px, 24px, $xxs, $template-size) adaptive-value(30px, 60px, $xxs, $template-size);
+    width: 100%;
+    color: cl(color-slate-blue);
+    font: cl(font-medium);
+    font-size: adaptive-value(10px, 25px, $xxs, $template-size);
+    background: transparent;
+
+    &::placeholder {
+      color: transparent;
+      pointer-events: none;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      outline: 0;
+      color: cl(color-slate-blue);
+      font: cl(font-medium);
+      background: transparent;
+    }
+}
+
+  &__input:focus ~ &__label,
+  &__input:not(:placeholder-shown) ~ &__label {
+    top: 0;
+    margin-left: 10px;
+    padding: 2px;
+    font: cl(font-medium);
+    font-size: adaptive-value(10px, 20px, $xxs, $template-size);
+    color: cl(color-slate-blue);
+    transform: translateY(-50%);
+    background: cl(color-biscay);
+  }
+
+
+  // .form-membership__btn
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  // .form-membership__agreement
+  &__agreement {
+    font: cl(font-medium);
+    font-size: adaptive-value(10px, 16px, $xxs, $template-size);
+    color: cl(color-storm-dust);
+  }
+
+  &__link {
+    font: cl(font-semibold);
+    cursor: pointer;
+    font-size: adaptive-value(10px, 16px, $xxs, $template-size);
+    color: cl(color-slate-blue);
+  }
+}

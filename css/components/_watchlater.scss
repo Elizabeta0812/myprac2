@@ -1,0 +1,19 @@
+.watchlater {
+  // .watchlater__container
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 45px;
+
+  }
+
+  // .watchlater__cards
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: adaptive-value(20px, 40px, $xxs, $template-size);
+  }
+}

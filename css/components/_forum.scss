@@ -1,0 +1,71 @@
+.forum {
+  position: relative;
+
+  // .forum__container
+  &__container {
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: -30px;
+      left: 0;
+      right: 0;
+      height: 250px;
+      background: url("../img/mainpage/forum/topwave_forum.svg") center /cover no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  // .forum__body
+  &__body {
+    width: 100vw;
+    position: relative;
+    padding-bottom: 45px;
+
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: 215px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: cl(color-slate-blue);
+      display: block;
+    }
+  }
+
+  // .forum__wrapper
+  &__wrapper {
+
+  }
+
+  // .forum__list
+  &__list {
+    display: grid;
+    align-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: adaptive-value(24px, 48px, $xxs, $template-size);
+    @media (max-width: $md) {
+      align-items: stretch;
+      align-content: stretch;
+    }
+  }
+
+  // .forum__title
+  &__title {
+    margin-bottom: 150px;
+  }
+
+  // .forum__item
+  &__item {
+    &_sl {
+      flex: 1 0 percents(680, $container-size);
+    }
+
+    &_bg {
+      flex: 1 0 percents(930, $container-size);
+    }
+  }
+}

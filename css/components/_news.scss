@@ -1,0 +1,86 @@
+.news {
+  position: relative;
+
+
+  &__container {
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: -270px;
+      left: 0;
+      right: 0;
+      height: 288px;
+      background: url("../img/mainpage/news/topwave_news.svg") center /cover no-repeat;
+      pointer-events: none;
+    }
+
+    &:after {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      bottom: -270px;
+      left: 0;
+      right: 0;
+      height: 288px;
+      background: url("../img/mainpage/news/bottomwave_news.svg") center /cover no-repeat;
+      pointer-events: none;
+    }
+  }
+
+
+  &__body {
+  position: relative;
+  width: 100vw;
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      background: cl(color-slate-blue);
+    }
+
+  }
+
+  &__wrapper {
+    display: grid;
+    min-height: 637px;
+    column-gap: 115px;
+    row-gap: adaptive-value(25px, 50px, $xxs, $template-size);
+    align-items: start;
+    grid-template-areas: "none title" "news_main news";
+    @media (max-width: $md) {
+      grid-template-areas: "title" "news_main" "news";
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    .title__link {
+      @media (any-hover: hover) {
+        &::after {
+          background: cl(color-white);
+        }
+      }
+    }
+  }
+
+  &__other {
+    grid-area: news;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: adaptive-value(25px, 50px, $lg, $template-size);
+  }
+  &__main {
+    z-index: 1;
+    grid-area: news_main;
+  }
+}

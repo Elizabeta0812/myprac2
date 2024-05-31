@@ -1,0 +1,27 @@
+.footer {
+  padding: 30px;
+  // .footer__container
+  &__container {
+    @media (max-width: $md) {
+      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: adaptive-value(15px, 30px, $xxs, $template-size)
+  }
+
+  // .footer__logo
+  &__logo {
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
+  }
+
+  // .footer__nav
+  &__nav {
+  }
+}
